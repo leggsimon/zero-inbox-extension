@@ -1,0 +1,17 @@
+{
+  "name": "Zero Inbox Search",
+  "version": "1.1",
+  "description": "Zero Inbox Search",
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["index.js"],
+    "persistent": false
+  },
+  "permissions": ["tabs", "https://mail.google.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["index.js"]
+    }
+  ]
+}
